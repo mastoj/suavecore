@@ -1,5 +1,8 @@
-kubectl create configmap nginx-suave-conf --from-file=nginx/suave.conf
+kubectl create configmap nginx-frontend-conf --from-file=nginx/frontend.conf
+kubectl create secret generic tls-certs --from-file=tls/
 kubectl create -f deployments/hello.yaml
 kubectl create -f services/hello.yaml
 kubectl create -f deployments/frontend.yaml
 kubectl create -f services/frontend.yaml
+
+openssl req -newkey rsa:4096 -nodes -sha512 -x509 -days 3650 -nodes -out cert.pem -keyout key.pem

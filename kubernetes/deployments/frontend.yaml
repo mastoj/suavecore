@@ -18,17 +18,17 @@ spec:
               exec:
                 command: ["/usr/sbin/nginx","-s","quit"]
           volumeMounts:
-            - name: "nginx-suave-conf"
+            - name: "nginx-frontend-conf"
               mountPath: "/etc/nginx/conf.d"
-#            - name: "tls-certs"
-#              mountPath: "/etc/tls"
+            - name: "tls-certs"
+              mountPath: "/etc/tls"
       volumes:
-#        - name: "tls-certs"
-#          secret:
-#            secretName: "tls-certs"
-        - name: "nginx-suave-conf"
+        - name: "tls-certs"
+          secret:
+            secretName: "tls-certs"
+        - name: "nginx-frontend-conf"
           configMap:
-            name: "nginx-suave-conf"
+            name: "nginx-frontend-conf"
             items:
-              - key: "suave.conf"
-                path: "suave.conf"
+              - key: "frontend.conf"
+                path: "frontend.conf"
