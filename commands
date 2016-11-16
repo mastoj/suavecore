@@ -1,0 +1,5 @@
+kubectl create configmap nginx-suave-conf --from-file=nginx/suave.conf
+kubectl create -f deployments/hello.yaml
+kubectl create -f services/hello.yaml
+kubectl create -f deployments/frontend.yaml
+kubectl create -f services/frontend.yaml
