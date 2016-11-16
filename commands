@@ -1,3 +1,9 @@
+gcloud components install kubectl
+gcloud init
+
+gcloud container clusters create k1
+
+
 kubectl create configmap nginx-frontend-conf --from-file=nginx/frontend.conf
 kubectl create secret generic tls-certs --from-file=tls/
 kubectl create -f deployments/hello.yaml
@@ -6,3 +12,10 @@ kubectl create -f deployments/frontend.yaml
 kubectl create -f services/frontend.yaml
 
 openssl req -newkey rsa:4096 -nodes -sha512 -x509 -days 3650 -nodes -out cert.pem -keyout key.pem
+
+dotnet build
+dotnet publish -c Release
+dotnet run
+
+docker build . -t mastoj/suavecore:v1.2
+docker push mastoj/suavecore:v1.2

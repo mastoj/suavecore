@@ -59,6 +59,6 @@ let main argv =
     startWebServer
         { defaultConfig with
             bindings = [ HttpBinding.create HTTP args.IP args.Port ] }
-        (Successful.OK (sprintf "Hello world: %A" (System.Guid.NewGuid())))
+        (Successful.OK (sprintf "Hello world: %A, |%s|" (System.Guid.NewGuid()) (getHostName())))
 
     0
