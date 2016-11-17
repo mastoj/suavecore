@@ -3,7 +3,7 @@
   "version": 2,
   "targets": {
     ".NETCoreApp,Version=v1.0": {
-      "Libuv/1.9.0": {
+      "Libuv/1.9.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.0.1"
@@ -167,10 +167,10 @@
           }
         }
       },
-      "Microsoft.NETCore.App/1.0.1": {
+      "Microsoft.NETCore.App/1.1.0": {
         "type": "package",
         "dependencies": {
-          "Libuv": "1.9.0",
+          "Libuv": "1.9.1",
           "Microsoft.CSharp": "4.0.1",
           "Microsoft.CodeAnalysis.CSharp": "1.3.0",
           "Microsoft.CodeAnalysis.VisualBasic": "1.3.0",
@@ -443,10 +443,10 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Suave/2.0.0-rc1": {
+      "Suave/2.0.0-rc2": {
         "type": "package",
         "dependencies": {
-          "Microsoft.FSharp.Core.netcore": "1.0.0-alpha-161103",
+          "Microsoft.FSharp.Core.netcore": "1.0.0-alpha-161111",
           "NETStandard.Library": "1.6.0",
           "System.Data.Common": "4.1.0",
           "System.Diagnostics.Process": "4.1.0",
@@ -2228,12 +2228,12 @@
     }
   },
   "libraries": {
-    "Libuv/1.9.0": {
-      "sha512": "KSKKDqlDVxi6exzc0tE4pZSE2Vqf1zB2wp/9lLQi9RID0RDLJ3LgT258Blc9h3hLW36piaNB3bjrSypX0xfMSw==",
+    "Libuv/1.9.1": {
+      "sha512": "uqX2Frwf9PW8MaY7PRNY6HM5BpW1D8oj1EdqzrmbEFD5nH63Yat3aEjN/tws6Tw6Fk7LwmLBvtUh32tTeTaHiA==",
       "type": "package",
-      "path": "Libuv/1.9.0",
+      "path": "Libuv/1.9.1",
       "files": [
-        "Libuv.1.9.0.nupkg.sha512",
+        "Libuv.1.9.1.nupkg.sha512",
         "Libuv.nuspec",
         "License.txt",
         "runtimes/debian-x64/native/libuv.so",
@@ -2386,12 +2386,12 @@
         "runtimes/any/native/FSharp.Core.xml"
       ]
     },
-    "Microsoft.NETCore.App/1.0.1": {
-      "sha512": "07nDRLQtg5yNFrz4rDzfNRVX4+CdPTvCLHdGdB87WwE4as8dwhCRsWploCLSWZbmoLhL3f0vQLlRr7lUj2QYsQ==",
+    "Microsoft.NETCore.App/1.1.0": {
+      "sha512": "DFec+OUojDVocn1GxAL9uJg4qwsgkvKiQpv6BKd9ljGezvc9p6GpFv51IIakiujkVW/wBtQ0xlfjVSgS1UG/uw==",
       "type": "package",
-      "path": "Microsoft.NETCore.App/1.0.1",
+      "path": "Microsoft.NETCore.App/1.1.0",
       "files": [
-        "Microsoft.NETCore.App.1.0.1.nupkg.sha512",
+        "Microsoft.NETCore.App.1.1.0.nupkg.sha512",
         "Microsoft.NETCore.App.nuspec",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
@@ -2674,16 +2674,21 @@
         "runtime.native.System.Security.Cryptography.nuspec"
       ]
     },
-    "Suave/2.0.0-rc1": {
-      "sha512": "U09ksxuRZC6Y2T6HNi3PVadWbh3k+O0NogYS2AfyIsNpFu42WetpZtZLb4YOPvdpXcPUih+QtdeZzdl6M0ohjg==",
+    "Suave/2.0.0-rc2": {
+      "sha512": "evgjqeihx+aHtJBB21XNW+90A2o5FOXPLk04TEReMhkAm+hTtKnVDT7rlw+uI2mns2IcHhgVplfYkO5W/mxH5Q==",
       "type": "package",
-      "path": "Suave/2.0.0-rc1",
+      "path": "Suave/2.0.0-rc2",
       "files": [
-        "Suave.2.0.0-rc1.nupkg.sha512",
+        "Suave.2.0.0-rc2.nupkg.sha512",
         "Suave.nuspec",
+        "lib/net40/Suave.2.0.0-alpha6-dotnetcli.nupkg",
+        "lib/net40/Suave.2.0.0-alpha6-dotnetcli.symbols.nupkg",
+        "lib/net40/Suave.2.0.0-rc1-dotnetcli.nupkg",
+        "lib/net40/Suave.2.0.0-rc1-dotnetcli.symbols.nupkg",
         "lib/net40/Suave.dll",
         "lib/net40/Suave.dll.config",
         "lib/net40/Suave.dll.mdb",
+        "lib/net40/Suave.pdb",
         "lib/net40/Suave.xml",
         "lib/netstandard1.6/Suave.dll"
       ]
@@ -7116,11 +7121,11 @@
   "projectFileDependencyGroups": {
     "": [
       "Microsoft.FSharp.Core.netcore >= 1.0.0-alpha-*",
-      "Suave >= 2.0.0-rc1"
+      "Suave >= 2.0.0-rc2"
     ],
     ".NETCoreApp,Version=v1.0": [
-      "Microsoft.FSharp.Core.netcore >= 1.0.0-alpha-160629",
-      "Microsoft.NETCore.App >= 1.0.1"
+      "Microsoft.FSharp.Core.netcore >= 1.0.0-alpha-161111",
+      "Microsoft.NETCore.App >= 1.1.0"
     ]
   },
   "tools": {
@@ -7145,7 +7150,7 @@
   },
   "projectFileToolGroups": {
     ".NETCoreApp,Version=v1.0": [
-      "dotnet-compile-fsc >= 1.0.0-preview2-*"
+      "dotnet-compile-fsc >= 1.0.0-preview2.1-*"
     ]
   }
 }

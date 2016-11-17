@@ -35,30 +35,10 @@ let main argv =
     let getHostName() = 
         Dns.GetHostName()
 
-    let getHostEntry (hostName:string) = 
-        Dns.GetHostEntryAsync(hostName).Result
-
-    let getIPs (hostEntry:IPHostEntry) = 
-        hostEntry.AddressList
-
-    let getIPString (ip:IPAddress) =
-        if ip.AddressFamily = Sockets.AddressFamily.InterNetwork
-        then Some (ip.ToString())
-        else None
-
-    let getIPStrings() = 
-        getHostName()
-        |> log
-        |> (getHostEntry >> log)
-        |> (getIPs >> log)
-        |> Array.choose getIPString
-        |> Array.toList
-
-
     // start suave
     startWebServer
         { defaultConfig with
             bindings = [ HttpBinding.create HTTP args.IP args.Port ] }
-        (Successful.OK (sprintf "Hello world: %A, |%s|" (System.Guid.NewGuid()) (getHostName())))
+        (Successful.OK (sprintf "Hello world: %s" (getHostName())))
 
     0

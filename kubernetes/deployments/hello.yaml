@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
         - name: hello
-          image: "mastoj/suavecore:v1.3"
+          image: "mastoj/suavecore:latest"
           args: ["--ip", "0.0.0.0"]
           ports:
             - name: http
